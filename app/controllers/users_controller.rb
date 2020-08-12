@@ -3,12 +3,11 @@ class UsersController < ApplicationController
 
     def index 
         users = User.all
-        render json: users
+        render json: users, only: [:id, :name, :email]
     end
 
     def create 
-        binding.pry
         user = User.create(name: params[:name], email: params[:email], phone: params[:phone])
-        render json: user
+        render json: user, only: [:id, :name, :email]
     end
 end
