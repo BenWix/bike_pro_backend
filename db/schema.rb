@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_08_11_144553) do
 
   create_table "bikes", force: :cascade do |t|
-    t.string "type"
+    t.string "bike_type"
     t.string "name"
     t.integer "miles"
     t.integer "user_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_08_11_144553) do
 
   create_table "repairs", force: :cascade do |t|
     t.integer "bike_id"
-    t.string "type"
+    t.string "repair_type"
     t.integer "miles"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
