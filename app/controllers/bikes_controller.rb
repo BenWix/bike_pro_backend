@@ -8,7 +8,7 @@ class BikesController < ApplicationController
 
     def show 
         bike = Bike.find_by_id(params[:id])
-        render json: bike
+        render json: bike, include: [:repairs]
     end
     
     def create

@@ -11,21 +11,34 @@ Repair.delete_all
 
 ben = User.create(name: 'Ben', email: 'ben@ben.com', phone: '317')
 
-ben.bikes.create(bike_type: 'full_sus', strava_id: '7832517', name: 'Kona Process 134 DL')
-ben.bikes.create(bike_type: 'road', miles: '247', name: 'unknown road bike')
+blue_kona = ben.bikes.create(bike_type: 'Full Suspension', strava_id: '7832517', name: 'Kona Process 134 DL')
+
+weird_bike = ben.bikes.create(bike_type: 'Road Bike', miles: 247, name: 'unknown road bike')
+weird_bike.repairs.create(repair_type: 'Drive Train',miles: 225)
+weird_bike.repairs.create(repair_type: 'Tires',miles: 225)
+
 
 meghan = User.create(name: 'Meghan', email: 'meghan@meghan.com', phone: '260')
 
-meghan.bikes.create(bike_type: 'hard tail', miles: '40', name: 'Specialized Rockhopper')
+rockhopper = meghan.bikes.create(bike_type: 'Hardtail', miles: 40, name: 'Specialized Rockhopper')
 
 will = User.create(name: 'Will', email: 'will@will.com', phone: '502')
 
+stache = will.bikes.create(bike_type: 'Hardtail', miles: 192, name: 'Trek Stache 5')
+stache.repairs.create(repair_type: 'Suspension',miles: 50)
+stache.repairs.create(repair_type: 'Wheels',miles: 100)
 
 mason = User.create(name: 'Mason', email: 'mason@mason.com', phone: '692')
 
-mason.bikes.create(bike_type: 'full_sus', miles: '124', name: 'Kona Process 153 CR/DL')
-mason.bikes.create(bike_type: 'ridgid', miles: '732', name: 'custome steel bike')
-mason.bikes.create(bike_type: 'gravel', miles: '382', name: 'allcity gravel bike')
+purple_kona = mason.bikes.create(bike_type: 'Full Suspension', miles: 124, name: 'Kona Process 153 CR/DL')
+
+purple_kona.repairs.create(repair_type: 'Tires',miles: 75)
+purple_kona.repairs.create(repair_type: 'Drivetrain',miles: 100)
+purple_kona.repairs.create(repair_type: 'Suspension',miles: 100)
+
+
+mule = mason.bikes.create(bike_type: 'Hardtail', miles: 732, name: 'custome steel bike')
+all_city = mason.bikes.create(bike_type: 'Road Bike', miles: 382, name: 'allcity gravel bike')
 
 olivia = User.create(name: 'Olivia', email: 'olivia@olivia.com', phone: '442')
 
