@@ -14,6 +14,6 @@ class UsersController < ApplicationController
 
     def create 
         user = User.create(name: params[:name], email: params[:email], phone: params[:phone])
-        render json: user, only: [:id, :name, :email]
+        render json: user, include: [:bikes]
     end
 end
