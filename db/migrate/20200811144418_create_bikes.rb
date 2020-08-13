@@ -5,7 +5,6 @@ class CreateBikes < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :miles
       t.integer :user_id
-      t.string :strava_id
 
       t.timestamps
     end

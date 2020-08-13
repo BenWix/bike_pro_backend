@@ -11,7 +11,7 @@ Repair.delete_all
 
 ben = User.create(name: 'Ben', email: 'ben@ben.com', phone: '317')
 
-blue_kona = ben.bikes.create(bike_type: 'Full Suspension', strava_id: '7832517', name: 'Kona Process 134 DL')
+blue_kona = ben.bikes.create(bike_type: 'Full Suspension', name: 'Kona Process 134 DL')
 
 weird_bike = ben.bikes.create(bike_type: 'Road Bike', miles: 247, name: 'unknown road bike')
 weird_bike.repairs.create(repair_type: 'Drive Train',miles: 225)

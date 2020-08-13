@@ -13,7 +13,7 @@ class BikesController < ApplicationController
     
     def create
         user = User.find_by_id(params[:user_id])
-        bike = user.bikes.create(name: params[:name], miles: params[:miles], bike_type: params[:bike_type], strava_id: params[:strava_id], date_purchase: params[:date_purchased])
+        bike = user.bikes.create(name: params[:name], miles: params[:miles], bike_type: params[:bike_type], date_purchase: params[:date_purchased])
         render json: bike
     end
 

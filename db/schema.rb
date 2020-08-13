@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2020_08_13_155754) do
     t.string "name"
     t.integer "miles"
     t.integer "user_id"
-    t.string "strava_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "date_purchase"
