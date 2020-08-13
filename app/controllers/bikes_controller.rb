@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-    skip_before_action :verify_authenticity_token, only: [:create, :destroy]
+    skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
 
     def index 
         bikes = Bike.all
@@ -15,6 +15,13 @@ class BikesController < ApplicationController
         user = User.find_by_id(params[:user_id])
         bike = user.bikes.create(name: params[:name], miles: params[:miles], bike_type: params[:bike_type], date_purchase: params[:date_purchased])
         render json: bike
+    end
+
+    def update 
+        bike = Bike.find_by_id(params[:bike_id])
+        bike.miles = params[:miles]
+        bike.save
+        render json: bike, include: [:repairs]
     end
 
     def destroy 

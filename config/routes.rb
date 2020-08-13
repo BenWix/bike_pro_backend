@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :create, :destroy]
 
-  resources :bikes, only: [:index, :create, :show, :destroy]
+  resources :bikes, only: [:index, :create, :show, :update, :destroy]
 
   resources :repairs, only: [:index, :create]
 end
