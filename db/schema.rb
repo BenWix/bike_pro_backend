@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_144553) do
+ActiveRecord::Schema.define(version: 2020_08_13_143115) do
 
   create_table "bikes", force: :cascade do |t|
     t.string "bike_type"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_08_11_144553) do
     t.string "strava_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "date_purchase"
   end
 
   create_table "repairs", force: :cascade do |t|
