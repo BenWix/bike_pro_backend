@@ -5,6 +5,11 @@ class BikesController < ApplicationController
         bikes = Bike.all
         render json: bikes
     end
+
+    def show 
+        bike = Bike.find_by_id(params[:id])
+        render json: bike
+    end
     
     def create
         user = User.find_by_id(params[:user_id])
