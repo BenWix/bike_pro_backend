@@ -26,7 +26,7 @@ will = User.create(name: 'Will', email: 'will@will.com', phone: '502')
 
 stache = will.bikes.create(bike_type: 'Hardtail', miles: 192, name: 'Trek Stache 5')
 stache.repairs.create(repair_type: 'Suspension',miles: 50)
-stache.repairs.create(repair_type: 'Wheels',miles: 100)
+stache.repairs.create(repair_type: 'Tires',miles: 100)
 
 mason = User.create(name: 'Mason', email: 'mason@mason.com', phone: '692')
 
