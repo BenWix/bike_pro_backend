@@ -1,24 +1,13 @@
-# README
+This back end API is designed to be used with the following repo 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://github.com/BenWix/bike_pro_frontend
 
-Things you may want to cover:
+this repo has the front end that will utilize this api.
 
-* Ruby version
+This API uses restful routes to facilitate the front end and allow for a smooth experience in the app. It uses activerecord with rails to create full CRUD functionality
 
-* System dependencies
+To start this api, download the repo and navigate to the directory. Then run 
 
-* Configuration
+```rails s -p 3001```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+this will start the server on localhost:3001, which is the address that the front end will attempt to access for the API
